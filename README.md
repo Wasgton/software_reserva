@@ -136,7 +136,7 @@ O sistema utiliza jobs em background para processar:
 Configuração das filas no supervisor:
 
 ```ini
-[program:maruwa-worker]
+[program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
 command=php /path/to/project/artisan queue:work redis --sleep=3 --tries=3 --max-time=3600
 autostart=true
